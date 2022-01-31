@@ -1,0 +1,22 @@
+<header class="primary-navigation">
+  <nav class="nav">
+    <div class="icon menu-icon material-icons" (click)="toggleNavbar()">
+      menu
+    </div>
+    <div class="nav__left">
+      <a to="">MintMissy</a>
+    </div>
+    <div class="nav__right">
+      <ul class="nav__right__links" [ngClass]="{ active: isNavbarActive }">
+        <li class="nav-link"><a to="">Home</a></li>
+        <li class="nav-link">
+          <a to="">Projects</a>
+        </li>
+        <li class="nav-link">
+          <a to="">Contact</a>
+        </li>
+      </ul>
+      <div class="icon settings-icon material-icons">settings</div>
+    </div>
+  </nav>
+</header>

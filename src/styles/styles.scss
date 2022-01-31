@@ -1,0 +1,53 @@
+@import "_css_reset.scss";
+:root {
+  --primary-clr: hsl(206, 82%, 63%);
+
+  --background-clr-1: hsl(227, 24%, 7%);
+  --background-clr-2: hsl(225, 22%, 11%);
+  --background-clr-3: hsl(226, 20%, 13%);
+  --background-clr-4: hsl(229, 14%, 22%);
+
+  --text-clr-1: hsl(0, 0%, 100%);
+  --text-clr-2: hsl(0, 0%, 97%);
+  --text-clr-3: hsl(0, 0%, 92%);
+  --text-clr-4: hsl(0, 0%, 86%);
+}
+
+body {
+  background-color: var(--background-clr-2);
+  font-family: "Roboto", sans-serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+.underline-indicator {
+  position: relative;
+}
+
+.underline-indicator::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0%;
+  margin-inline: auto;
+  transition: width 0.15s;
+  background-color: var(--text-clr-1);
+}
+
+.underline-indicator:hover::after {
+  width: 100%;
+}
