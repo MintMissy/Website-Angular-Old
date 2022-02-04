@@ -124,7 +124,7 @@ $content-padding: 2rem;
     img {
       @media screen and (min-width: 769px) {
         margin-left: 0;
-        max-width: min(100%, 32rem);
+        max-width: min(100%, 20rem);
       }
       max-width: min(100%, 20rem);
       margin-inline: auto;
