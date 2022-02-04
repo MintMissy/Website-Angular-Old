@@ -13,6 +13,18 @@
   --text-clr-2: hsl(0, 0%, 97%);
   --text-clr-3: hsl(0, 0%, 92%);
   --text-clr-4: hsl(0, 0%, 86%);
+
+  --fs-small: 0.8rem;
+  --fs-regular: 1rem;
+  --fs-medium: 1.25rem;
+  --fs-title: 1.75rem;
+
+  @media screen and (min-width: 480px) {
+    --fs-small: 0.95rem;
+    --fs-regular: 1.1rem;
+    --fs-medium: 1.5rem;
+    --fs-title: 2rem;
+  }
 }
 
 body {
