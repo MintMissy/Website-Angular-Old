@@ -1,8 +1,19 @@
 $content-padding: 2rem;
 
-.home-container {
+.home-hero,
+.about {
   max-width: 1500px;
   margin-inline: auto;
+}
+
+.home-hero,
+.about {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-top: 2rem;
+  padding-inline: $content-padding;
+  gap: 2rem;
 }
 
 .home-hero {
@@ -11,19 +22,13 @@ $content-padding: 2rem;
     align-items: center;
     margin-top: 5rem;
   }
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  margin-top: 2rem;
-  max-width: 100%;
-  padding-inline: $content-padding;
-  gap: 2rem;
 
   &__content {
     @media screen and (min-width: 769px) {
       text-align: left;
     }
     text-align: center;
+
     h1 {
       font-size: var(--fs-medium);
       line-height: 1.4rem;
@@ -54,10 +59,71 @@ $content-padding: 2rem;
   }
 
   &__image {
+    @media screen and (max-width: 769px) {
+      margin-bottom: 2rem;
+    }
+
     img {
       @media screen and (min-width: 769px) {
         margin-right: 0;
-        margin-left: auto;
+        max-width: min(100%, 32rem);
+      }
+      max-width: min(100%, 20rem);
+      margin-inline: auto;
+    }
+  }
+}
+
+.about-container {
+  margin-top: 4rem;
+  padding-block: 2rem;
+  background-color: rgba($color: #000000, $alpha: 0.25);
+
+  @media screen and (min-width: 769px) {
+    margin-top: 8rem;
+    padding-block: 4rem;
+  }
+}
+
+.about {
+  @media screen and (min-width: 769px) {
+    flex-direction: row-reverse;
+    align-items: start;
+  }
+
+  &__content {
+    @media screen and (min-width: 769px) {
+      text-align: left;
+    }
+    text-align: center;
+
+    h1 {
+      font-size: var(--fs-title);
+      font-weight: 700;
+      color: var(--text-clr-2);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      @media screen and (min-width: 769px) {
+        width: 100%;
+      }
+
+      @media screen and (min-width: 900px) {
+        width: 50ch;
+      }
+      margin-bottom: 1rem;
+      max-width: min(100%, 50ch);
+      font-size: var(--fs-regular);
+      color: var(--text-clr-1);
+      margin-inline: auto;
+    }
+  }
+
+  &__image {
+    img {
+      @media screen and (min-width: 769px) {
+        margin-left: 0;
         max-width: min(100%, 32rem);
       }
       max-width: min(100%, 20rem);
