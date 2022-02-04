@@ -15,7 +15,7 @@
   height: 3rem;
   max-width: 100vw;
   padding: 0.65rem;
-  color: var(--text-clr-1);
+  color: var(--text-clr-4);
 
   .menu-icon {
     @media screen and (min-width: 481px) {
@@ -34,6 +34,7 @@
   .icon:hover,
   &-link:hover {
     background-color: var(--background-clr-3);
+    color: var(--text-clr-1);
   }
 
   &-link {

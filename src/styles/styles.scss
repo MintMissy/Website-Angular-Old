@@ -1,9 +1,11 @@
 @import "_css_reset.scss";
 :root {
-  --primary-clr: hsl(206, 82%, 63%);
+  --primary-clr: hsl(206, 82%, 58%);
+  --primary-clr--light: hsl(206, 82%, 63%);
+  --primary-clr--bright: hsl(206, 82%, 70%);
 
   --background-clr-1: hsl(227, 24%, 7%);
-  --background-clr-2: hsl(225, 22%, 11%);
+  --background-clr-2: hsl(225, 22%, 10%);
   --background-clr-3: hsl(226, 20%, 13%);
   --background-clr-4: hsl(229, 14%, 22%);
 
@@ -50,4 +52,24 @@ body {
 
 .underline-indicator:hover::after {
   width: 100%;
+}
+
+.btn {
+  background-color: var(--primary-clr);
+  color: var(--background-clr-1);
+  font-weight: 500;
+  border: none;
+  padding: 0.25em 1.5em;
+  border-radius: 5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.btn:hover {
+  background-color: var(--primary-clr--light);
+}
+
+.btn:active {
+  background-color: var(--primary-clr--bright);
 }
