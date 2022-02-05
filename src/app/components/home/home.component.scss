@@ -131,3 +131,48 @@ $content-padding: 2rem;
     }
   }
 }
+
+.skillset {
+  margin-top: 2rem;
+  .technologies {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+    list-style: none;
+    max-width: 100%;
+
+    .technology {
+      width: 150px;
+      padding: 1rem;
+      background-color: var(--background-clr-3);
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+      transition: transform 0.25s;
+
+      img {
+        margin-inline: auto;
+        max-width: 100%;
+        height: 5rem;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      &-title {
+        border-top: 1px solid var(--background-clr-4);
+        margin-top: 1rem;
+        padding-top: 0.75rem;
+        font-weight: 500;
+        color: var(--text-clr-2);
+        text-align: center;
+        font-size: 1.1rem;
+      }
+    }
+
+    .technology:hover {
+      transform: translateY(-1rem);
+      transform: scale(1.1);
+    }
+  }
+}
