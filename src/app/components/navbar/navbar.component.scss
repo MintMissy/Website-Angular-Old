@@ -24,8 +24,7 @@
     }
   }
 
-  .icon,
-  &-link {
+  .icon {
     border-radius: 5rem;
     background-color: var(--background-clr-2);
     cursor: pointer;
@@ -35,29 +34,26 @@
     padding: 0.25rem;
   }
 
-  &-link {
-    padding: 0.25rem 0.5rem;
+  .icon.active {
+    color: var(--primary-clr);
   }
 
-  .icon:hover,
-  &-link:hover {
+  .icon:hover {
     background-color: var(--background-clr-3);
-    color: var(--text-clr-1);
+    color: var(--primary-clr--bright);
   }
 
   &-link {
-    @media screen and (max-width: 480px) {
-      border-radius: 0;
-      background-color: unset;
-      padding: 0;
-    }
-    padding-inline: 1rem;
+    padding-inline: 0.5rem;
+    cursor: pointer;
+  }
+
+  &-link.active {
+    color: var(--primary-clr);
   }
 
   &-link:hover {
-    @media screen and (max-width: 480px) {
-      background-color: unset;
-    }
+    color: var(--primary-clr--bright);
   }
 
   &__right {
