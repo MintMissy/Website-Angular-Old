@@ -9,12 +9,15 @@ $content-padding-desktop: 3rem;
   margin-inline: auto;
 }
 
+.bigger-projects {
+  max-width: 1300px;
+  margin-inline: auto;
+}
+
 .home-hero,
 .about,
-.skillset {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
+.skillset,
+.bigger-projects {
   margin-top: 2rem;
   padding-inline: $content-padding;
   gap: 2rem;
@@ -22,6 +25,14 @@ $content-padding-desktop: 3rem;
   @media screen and (min-width: 769px) {
     padding-inline: $content-padding-desktop;
   }
+}
+
+.home-hero,
+.about,
+.skillset {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 .home-hero {
@@ -242,5 +253,36 @@ $content-padding-desktop: 3rem;
   .technology:hover {
     transform: translateY(-1rem);
     transform: scale(1.1);
+  }
+}
+
+.bigger-projects {
+  @media screen and (min-width: 769px) {
+    text-align: left;
+    margin-top: 7rem;
+  }
+  text-align: center;
+  margin-top: 4rem;
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: var(--fs-title);
+    font-weight: 700;
+    color: var(--text-clr-2);
+  }
+
+  &__cards {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+
+    @media screen and (min-width: 600px) {
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: 1100px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

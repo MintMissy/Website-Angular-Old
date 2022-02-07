@@ -17,12 +17,14 @@
   --fs-small: 0.8rem;
   --fs-regular: 1rem;
   --fs-medium: 1.25rem;
+  --fs-subtitle: 1.5rem;
   --fs-title: 1.75rem;
 
   @media screen and (min-width: 480px) {
     --fs-small: 0.95rem;
     --fs-regular: 1.1rem;
     --fs-medium: 1.5rem;
+    --fs-subtitle: 1.75rem;
     --fs-title: 2rem;
   }
 }
@@ -84,6 +86,7 @@ body {
 
 .btn:active {
   background-color: var(--primary-clr--bright);
+  transition: unset;
 }
 
 .btn--stroked {
