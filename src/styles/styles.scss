@@ -68,11 +68,11 @@ body {
 
 .btn {
   background-color: var(--primary-clr);
-  color: var(--background-clr-1);
+  color: var(--background-clr-2);
   font-weight: 500;
   border: none;
   padding: 0.25em 1.5em;
-  border-radius: 5rem;
+  border-radius: 0.5rem;
   font-size: 1.25rem;
   cursor: pointer;
   transition: background-color 0.1s;
@@ -84,4 +84,24 @@ body {
 
 .btn:active {
   background-color: var(--primary-clr--bright);
+}
+
+.btn--stroked {
+  background-color: unset;
+  border: 1px solid var(--background-clr-4);
+  color: var(--text-clr-1);
+  font-weight: 400;
+}
+
+.btn--stroked:hover,
+.btn--stroked:active {
+  background-color: unset;
+}
+
+.btn--stroked:hover {
+  border-color: var(--text-clr-4);
+}
+
+.btn--stroked:active {
+  border-color: var(--text-clr-1);
 }

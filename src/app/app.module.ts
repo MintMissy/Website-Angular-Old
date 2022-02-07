@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ClickElsewhereDirective } from './core/directives/click-elsewhere.directive';
 import { HomeComponent } from './components/home/home.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, ClickElsewhereDirective, HomeComponent],
+  declarations: [AppComponent, NavbarComponent, ClickElsewhereDirective, HomeComponent, ProjectCardComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

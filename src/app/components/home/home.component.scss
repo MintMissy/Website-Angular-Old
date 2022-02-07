@@ -1,4 +1,5 @@
 $content-padding: 2rem;
+$content-padding-desktop: 3rem;
 
 .home-hero,
 .about,
@@ -17,6 +18,10 @@ $content-padding: 2rem;
   margin-top: 2rem;
   padding-inline: $content-padding;
   gap: 2rem;
+
+  @media screen and (min-width: 769px) {
+    padding-inline: $content-padding-desktop;
+  }
 }
 
 .home-hero {
@@ -192,7 +197,7 @@ $content-padding: 2rem;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
-  padding-inline: 1.75rem;
+  padding-inline: $content-padding-desktop;
   gap: 2rem;
 
   .technology {
