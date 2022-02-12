@@ -17,6 +17,7 @@
         (clickElsewhere)="closeNavbar()"
         [clickElsewhereExceptions]="[toggleButton]"
         [ngClass]="{ active: isNavbarActive }"
+        #navRightLinks
       >
         <a to="" (click)="closeNavbar()"
           ><li class="nav-link active">Home</li></a
@@ -28,7 +29,7 @@
           <li class="nav-link">Contact</li>
         </a>
       </ul>
-      <div class="icon settings-icon material-icons">settings</div>
+      <div #settingsBtn class="icon settings-icon material-icons">settings</div>
     </div>
   </nav>
 </header>
