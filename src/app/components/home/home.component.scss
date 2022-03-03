@@ -54,7 +54,7 @@ $content-padding-desktop: 3rem;
     h2 {
       font-size: var(--fs-title);
       font-weight: 700;
-      color: var(--text-clr-2);
+      color: var(--text-clr-1);
     }
 
     p {
@@ -68,7 +68,7 @@ $content-padding-desktop: 3rem;
       margin-bottom: 1rem;
       max-width: min(100%, 50ch);
       font-size: var(--fs-regular);
-      color: var(--text-clr-1);
+      color: var(--text-clr-4);
       margin-inline: auto;
     }
   }
@@ -115,7 +115,7 @@ $content-padding-desktop: 3rem;
       margin-bottom: 1rem;
       font-size: var(--fs-title);
       font-weight: 700;
-      color: var(--text-clr-2);
+      color: var(--text-clr-1);
     }
 
     p {
@@ -129,7 +129,7 @@ $content-padding-desktop: 3rem;
       margin-bottom: 1rem;
       max-width: min(100%, 50ch);
       font-size: var(--fs-regular);
-      color: var(--text-clr-1);
+      color: var(--text-clr-4);
       margin-inline: auto;
     }
   }
@@ -164,7 +164,7 @@ $content-padding-desktop: 3rem;
       margin-bottom: 1rem;
       font-size: var(--fs-title);
       font-weight: 700;
-      color: var(--text-clr-2);
+      color: var(--text-clr-1);
     }
 
     p {
@@ -178,7 +178,7 @@ $content-padding-desktop: 3rem;
       margin-bottom: 1rem;
       max-width: min(100%, 50ch);
       font-size: var(--fs-regular);
-      color: var(--text-clr-1);
+      color: var(--text-clr-4);
       margin-inline: auto;
     }
   }
@@ -268,17 +268,17 @@ $content-padding-desktop: 3rem;
   }
 
   &__cards {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    position: relative;
+    gap: 2rem;
+    overflow-x: scroll;
+    padding-bottom: 1rem;
+    max-width: 100%;
+    margin-bottom: 2rem;
 
-    @media screen and (min-width: 600px) {
-      gap: 2rem;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media screen and (min-width: 1100px) {
-      grid-template-columns: repeat(3, 1fr);
+    .project-card {
+      display: block;
+      width: 450px;
     }
   }
 }

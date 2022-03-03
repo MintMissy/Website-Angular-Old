@@ -5,7 +5,7 @@
   <div class="card__content">
     <header class="card__content__header">
       <a href="">
-        <h1>Example Title</h1>
+        <h1>{{ projectData.title }}</h1>
       </a>
       <ul>
         <li>
@@ -16,16 +16,22 @@
         </li>
       </ul>
     </header>
-    <p class="card__content-last-update">Last Update: 12 Dec 2021</p>
+    <p class="card__content-last-update">
+      Last Update: {{ projectData.lastUpdate }}
+    </p>
     <p class="card__content-description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, earum
-      minima placeat error odio voluptas ab? Minima molestias maxime quibusdam.
+      {{ projectData.shortDescription }}
     </p>
   </div>
   <div class="card__cta">
-    <a href="">
+    <a href="{{ projectData.showcaseLink }}">
       <button class="btn">View</button>
     </a>
-    <button class="btn btn--stroked">Share</button>
+    <a
+      *ngIf="projectData.repositoryLink !== ''"
+      href="{{ projectData.repositoryLink }}"
+    >
+      <button class="btn btn--stroked">Repository</button>
+    </a>
   </div>
 </div>

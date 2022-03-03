@@ -34,6 +34,29 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-clr-1);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--background-clr-3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--background-clr-4);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

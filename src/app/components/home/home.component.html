@@ -4,10 +4,12 @@
       <h1 #homeHeroH1>Dawid 'MintMissy'</h1>
       <h2 #homeHeroH2>Frontend Developer</h2>
       <p #homeHeroP>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum iste,
-        unde rerum saepe impedit labore!
+        Hello! I'm passionate and curious about the world and people that
+        surround me.
       </p>
-      <button #homeHeroBtn class="btn">Check my Projects</button>
+      <a href="#projects">
+        <button #homeHeroBtn class="btn">Check my Projects</button>
+      </a>
     </div>
     <div class="home-hero__image">
       <img src="./assets/images/home/home-hero.png" alt="" aria-hidden="true" />
@@ -18,13 +20,15 @@
       <div class="about__content">
         <h1>Some words about me</h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, debitis
-          commodi corporis sed temporibus dolore voluptatum unde doloribus neque
-          ab dignissimos praesentium exercitationem assumenda aspernatur.
+          I'm 19 years old Computer Science student. I have been into coding for
+          4 years now. Over this time I learned a lot of skills - particularly
+          algorithmic thinking. I've been coding websites, web applications and
+          even a 2D and 3D games.
           <br />
           <br />
-          Eaque cupiditate impedit nihil mollitia fugit voluptas placeat veniam,
-          architecto ducimus consequatur praesentium exercitationem.
+          I love to learn new things, meet new people and expand the boundaries.
+          I believe that everything is possible and can be done in many
+          different ways.
         </p>
       </div>
       <div class="about__image">
@@ -41,10 +45,10 @@
     <div class="skillset__content">
       <h1>My abilities and skill set</h1>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum iusto
-        inventore assumenda ea enim, quisquam ut eveniet blanditiis id autem
-        culpa similique necessitatibus perferendis quibusdam libero sapiente
-        veritatis non impedit minus.
+        After a long journey with thousand lines of code I've stuck to
+        typescript. Currently I'm writing frontend applications with HTML, SCSS
+        based on Angular framework. In the past I had experience with Java,
+        Python and C#.
       </p>
     </div>
 
@@ -55,31 +59,36 @@
 
   <ul class="technologies">
     <li class="technology">
-      <img src="./assets/images/home/html.png" alt="" aria-hidden="true" />
-      <p class="technology-title">HTML</p>
+      <img src="./assets/images/home/angular.png" alt="" aria-hidden="true" />
+      <p class="technology-title">Angular</p>
+    </li>
+    <li class="technology">
+      <img
+        src="./assets/images/home/typescript.png"
+        alt=""
+        aria-hidden="true"
+      />
+      <p class="technology-title">Typescript</p>
+    </li>
+    <li class="technology">
+      <img src="./assets/images/home/sass.png" alt="" aria-hidden="true" />
+      <p class="technology-title">SCSS</p>
     </li>
     <li class="technology">
       <img src="./assets/images/home/python.png" alt="" aria-hidden="true" />
-      <p class="technology-title">Python</p>
-    </li>
-    <li class="technology">
-      <img src="./assets/images/home/sass.png" alt="" aria-hidden="true" />
-      <p class="technology-title">Sass</p>
-    </li>
-    <li class="technology">
-      <img src="./assets/images/home/sass.png" alt="" aria-hidden="true" />
       <p class="technology-title">...</p>
     </li>
   </ul>
 
-  <div class="bigger-projects">
+  <div class="bigger-projects" id="projects">
     <h1>Featured Projects</h1>
     <div class="bigger-projects__cards">
-      <app-project-card></app-project-card>
-      <app-project-card></app-project-card>
-      <app-project-card></app-project-card>
-      <app-project-card></app-project-card>
-      <app-project-card></app-project-card>
+      <ng-container *ngFor="let project of featuredProjects; let i = index">
+        <app-project-card
+          class="project-card"
+          [projectData]="project"
+        ></app-project-card>
+      </ng-container>
     </div>
   </div>
   <div class="social-media"></div>

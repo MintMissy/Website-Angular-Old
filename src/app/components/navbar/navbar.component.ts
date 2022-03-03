@@ -24,10 +24,12 @@ export class NavbarComponent implements OnInit {
       x: 50,
       stagger: 0.15,
     });
+
     gsap.from(this.settingsBtn.nativeElement, {
       delay: 0.45,
       duration: 0.75,
       opacity: 0,
+      rotate: 135,
       x: 50,
     });
   }

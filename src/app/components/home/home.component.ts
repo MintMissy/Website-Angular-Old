@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { gsap } from 'gsap';
+import { projects } from 'src/app/core/data/projects';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,8 @@ export class HomeComponent implements OnInit {
   homeHeroP!: ElementRef<HTMLParagraphElement>;
   @ViewChild('homeHeroBtn', { static: true })
   homeHeroBtn!: ElementRef<HTMLButtonElement>;
+
+  featuredProjects = projects;
 
   constructor() {}
 
