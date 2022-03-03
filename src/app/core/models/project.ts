@@ -7,6 +7,7 @@ export interface IProject {
   cardBanner: string;
   repositoryLink: string;
   showcaseLink: string;
+  primaryLanguage: string;
   languages: language[];
   lastUpdate: string;
 }

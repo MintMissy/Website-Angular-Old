@@ -1,18 +1,15 @@
 <div class="card">
   <div class="card__banner">
-    <img src="./assets/images/home/banner.png" alt="" />
+    <img src="data:image/png;base64,{{ projectData.cardBanner }}" alt="" />
   </div>
   <div class="card__content">
     <header class="card__content__header">
-      <a href="">
-        <h1>{{ projectData.title }}</h1>
-      </a>
+      <!-- <a href=""> -->
+      <h1>{{ projectData.title }}</h1>
+      <!-- </a> -->
       <ul>
         <li>
-          <img src="./assets/images/languages-icons/java-icon.png" alt="java" />
-        </li>
-        <li>
-          <img src="./assets/images/languages-icons/html-icon.png" alt="java" />
+          <img src="./assets/images/languages-icons/{{projectData.primaryLanguage}}-icon.png" alt="{{projectData.primaryLanguage}}" />
         </li>
       </ul>
     </header>
@@ -24,7 +21,10 @@
     </p>
   </div>
   <div class="card__cta">
-    <a href="{{ projectData.showcaseLink }}">
+    <a
+      *ngIf="projectData.showcaseLink !== ''"
+      href="{{ projectData.showcaseLink }}"
+    >
       <button class="btn">View</button>
     </a>
     <a
